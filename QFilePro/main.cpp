@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[])
 {
-    QFile file{"C:\\Users\\RayaneGostar\\Documents\\QFilePro\\test.txt"};
+    QFile file{"test.txt"};
 
     if(file.open(QIODevice::ReadWrite)) {
         file.write("Hello!");
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
         file.flush();
         file.seek(6);
         file.write("Armita");
-        file.copy("C:\\Users\\RayaneGostar\\Documents\\QFilePro\\test_copy.txt");
+        file.copy("test_copy.txt");
         file.remove();
     }
 
